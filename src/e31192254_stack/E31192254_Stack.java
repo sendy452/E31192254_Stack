@@ -25,6 +25,7 @@ public class E31192254_Stack {
         System.out.println("====================================");
         System.out.println("");
 
+        //"Do" untuk melakukan perintah yang pertama kasli dijalankan sebelum melanjutkan ke perulangan while
         do {
             System.out.println("~~~~~~~~~~~~~~MAIN MENU~~~~~~~~~~~~~");
             System.out.println("1. PUSH Item");
@@ -34,18 +35,19 @@ public class E31192254_Stack {
             System.out.print("Masukkan pilihan menu : ");
             pilih = input.next();
             
-            if ("1".equalsIgnoreCase(pilih)) {
+            //Pilihan menu dalam Program Stack, dimana tiap menu mengambil dari Class Stack yang diberi nama objek baru disini sebagai result
+            if ("1".equalsIgnoreCase(pilih)) {                                  //Menu input/Push
                 System.out.print("Masukkan kata yang akan ditambahkan : ");
                 data = input.next();
                 result.Push(data);
-            } else if ("2".equalsIgnoreCase(pilih)) {
+            } else if ("2".equalsIgnoreCase(pilih)) {                           //Menu Pop/hapus data
                 result.Pop();
-            } else if ("3".equalsIgnoreCase(pilih)) {
+            } else if ("3".equalsIgnoreCase(pilih)) {                           //Menu keluar dari program
                 System.exit(0);
             } else {
-                System.out.println("Pilihan tidak ada");
+                System.out.println("Pilihan tidak ada");                        //Output yang keluar apabila salah memasukkan pilihan menu
             }
-            result.Display();
-        } while (pilih != null);
+            result.Display();   //Menampilkan isi dari array Stack
+        } while (pilih != null);    //Perulangan terjadi sampai inputan pilihan menu/pilih bernilai tidak kosong atau salah input              
     }
 }

@@ -14,19 +14,24 @@ public class Stack {
     private int pos, max_data = 5;
     private String teks[] = new String[max_data];
 
+    //Method Stack untuk menset jalan program saat awal dijalankan
     public void Stack() {
         full = false;
         empty = true;
         pos = 0;
     }
     
+    //Method untuk mengembalikan nilai boolean apabila isi array Stack sudah penuh
     public boolean isFull(){
         return full;
     }
+    //Method untuk mengecek apakah isi array Stack masih kosong atau belum penuh
     public boolean isEmpty(){
         return empty;
     }
     
+    //Method Push untuk menambahkan data sementara(saat program masih jalan) ke dalam array
+    //Juga memebritahu apakah data sudah ditambahkan(Push) dan juga apakah isi array sudah penuh
     public void Push(String data){
         if (!isFull()) {
             teks[pos++]=data;
@@ -41,6 +46,8 @@ public class Stack {
         return;
     }
     
+    //Method POP untuk mengahpus data di dalam array yang terakhir kali di Push atau diinputkan
+    //Juga memberitahu apakah data berhasil dihapus dan juga isi array telah kosong atau belum ada isi
     public String Pop(){
         String x = null;
         if(!isEmpty()){
@@ -61,6 +68,7 @@ public class Stack {
         return x;
     }
     
+    //Method Display untuk menampilkan isi dari array yang telah diinputkan maupun yang telah dihapus/data array terbaru yang ditampilkan
     public void Display(){
         System.out.print("Isi Stack saat ini adalah : ");
         for (int i = 0; i < pos; i++) {
